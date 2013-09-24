@@ -1,0 +1,7 @@
+.DS_Store*
+.tm_properties
+couchbot_vars
+node_modules
+npm-debug.log
+supervisord.log
+supervisord.pid
