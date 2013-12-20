@@ -24,5 +24,6 @@
  "shipit.coffee",
  "stallman.coffee",
  "wunderground.coffee",
- "xkcd.coffee"
+ "xkcd.coffee",
+ "zendesk.coffee"
 ]
