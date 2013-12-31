@@ -1,0 +1,9 @@
+---
+# File: site.yml - Main Hubot playbook
+
+- name: Hubot Activate!
+  hosts: hubot
+  sudo: True
+  roles:
+     - hubot
+

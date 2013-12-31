@@ -1,0 +1,6 @@
+---
+# File: roles/hubot/handlers/main.yml - Hubot role handlers
+
+- name: restart hubot
+  service: name=hubot state=restarted
+

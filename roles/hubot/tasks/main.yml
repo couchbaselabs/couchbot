@@ -1,0 +1,70 @@
+---
+# File: roles/hubot/tasks.yml - Hubot role tasks
+
+- name: Fetch EPEL repository package
+  get_url: url={{ epel_url }} dest=/tmp/{{ epel_package }}
+
+- name: Install EPEL package
+  yum: "name=/tmp/{{ epel_package }} state=present"
+
+- name: Install development tools
+  yum: name="@Development tools" state="latest"
+  
+- name: Install OS packages
+  yum: "name={{ item }} state=latest"
+  with_items: os_packages
+
+- name: Start Redis
+  service: name=redis state=started
+
+- name: Install Node Version Manager
+  git: "repo=https://github.com/creationix/nvm.git dest={{ nvm_dir }}"
+
+- name: Install Node.js
+  shell: ". {{ nvm_dir }}/nvm.sh && nvm install {{ node_version }} creates={{ node_dir }} executable=/bin/bash"
+
+- name: Clone Hubot repository
+  git: "repo=git://github.com/github/hubot.git dest={{ src_dir }}"
+
+- name: Install Hubot base
+  command: "{{ node_dir }}/npm install chdir={{ src_dir }}"
+
+- name: Install CoffeeScript
+  command: "{{ node_dir }}/npm install -g coffee-script creates={{ node_dir }}/coffee"
+
+- name: Assemble Hubot
+  shell: ". {{ nvm_dir }}/nvm.sh && nvm use {{ node_version }} && make package chdir={{ src_dir }} executable=/bin/bash"
+
+- name: Decommission Hubot previous model
+  file: "path={{ hubot_dir }} state=absent"
+
+- name: Activate new Hubot
+  command: " mv {{ src_dir }}/hubot {{hubot_dir}}/"
+
+- name: Install Hubot script dependencies
+  command: "{{ node_dir }}/npm install chdir={{ hubot_dir }}"
+  command: "{{ node_dir }}/npm install {{ item }} chdir={{ hubot_dir }} creates={{ hubot_dir }}/node_modules/{{ item }}"
+  with_items: node_packages
+  
+- name: Define Hubot environment
+  template: "src=_hubot.env.j2 dest={{ hubot_dir }}/{{ hubot_identity }}.env"
+
+- name: Install Hubot start script
+  template: "src=hubot-hipchat.j2 dest={{ hubot_dir }}/bin/hubot-hipchat mode=0744"
+
+- name: Install Hubot scripts
+  copy: "src=scripts dest={{ hubot_dir }}/scripts owner={{ hubot_admin }} mode=0644"
+
+- name: Hubot home permissions
+  file: "path=/home/{{ hubot_admin }} owner={{ hubot_admin }} group={{ hubot_admin }} recurse=yes"
+  
+- name: Install service init script
+  template: "src=hubot.init.j2 dest=/etc/init.d/hubot mode=0744"
+  notify:
+    - restart hubot
+
+- name: Configure Hubot scripts
+  template: "src=hubot-scripts.json.j2 dest={{ hubot_dir }}/hubot-scripts.json"
+  notify:
+    - restart hubot
+

@@ -1,0 +1,41 @@
+---
+# File: group_vars/all - Hubot role variables
+# 
+# hubot_admin: Change to the user account that will run the bot; for
+# operating in development mode with Vagrant, this value should be "vagrant".
+# hubot_dir: Change to the home directory for the bot
+# hubot_identity: Change to a different short user name if necessary
+# hubot_scripts: A list of additional scripts used by our Hubot
+
+hubot_admin: brian
+hubot_dir: "/home/{{ hubot_admin }}/hubot"
+hubot_identity: couchbot
+hubot_scripts:
+  - achievement_unlocked.coffee
+  - ackbar.coffee
+  - applause.coffee
+  - ascii.coffee
+  - base64.coffee
+  - beerme.coffee
+  - bees.coffee
+  - cat.coffee
+  - chm.coffee
+  - clark.coffee
+  - coin.coffee
+  - cowsay.coffee
+  - decide.coffee
+  - fortune.coffee
+  - hackernews.coffee
+  - megusta.coffee
+  - meme_generator.coffee
+  - penny-arcade.coffee
+  - ping.coffee
+  - redis-brain
+  - remind.coffee
+  - scotch.coffee
+  - shipit.coffee
+  - stallman.coffee
+  - wunderground.coffee
+  - xkcd.coffee
+  - zendesk.coffee
+

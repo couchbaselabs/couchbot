@@ -1,7 +1,6 @@
-.DS_Store*
+.DS_Store
 .tm_properties
-couchbot_vars
+.vagrant
 node_modules
-npm-debug.log
-supervisord.log
-supervisord.pid
+_hubot.env.j2
+

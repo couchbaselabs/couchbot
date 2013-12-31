@@ -1,0 +1,14 @@
+#!/bin/sh
+
+cd {{ hubot_dir }}
+
+[[ -s {{ hubot_dir }}/{{hubot_identity}}.env ]] && . {{ hubot_dir }}/{{hubot_identity}}.env
+[[ -s {{ nvm_dir }}/nvm.sh ]] && . {{ nvm_dir }}/nvm.sh
+
+nvm use {{ node_version }}
+
+export PATH="$COUCHBOT_HOME/node_modules/.bin:$PATH"
+npm install
+
+exec {{ hubot_dir }}/node_modules/.bin/hubot "$@" -a hipchat
+
