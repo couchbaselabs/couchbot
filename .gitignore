@@ -1,6 +1,6 @@
 .DS_Store
 .tm_properties
 .vagrant
+_hubot.env*
 node_modules
-_hubot.env.j2
 

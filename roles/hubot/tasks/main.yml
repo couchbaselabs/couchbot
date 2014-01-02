@@ -65,6 +65,8 @@
 
 - name: Configure Hubot scripts
   template: "src=hubot-scripts.json.j2 dest={{ hubot_dir }}/hubot-scripts.json"
+  tags:
+    - configuration
   notify:
     - restart hubot
 
