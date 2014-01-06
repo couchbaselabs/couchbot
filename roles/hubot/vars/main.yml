@@ -11,6 +11,7 @@ hubot_admin: brian
 hubot_dir: "/home/{{ hubot_admin }}/hubot"
 hubot_identity: couchbot
 hubot_scripts:
+  - announce.coffee
   - achievement_unlocked.coffee
   - ackbar.coffee
   - applause.coffee
