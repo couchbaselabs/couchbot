@@ -25,6 +25,7 @@ hubot_scripts:
   - coin.coffee
   - cowsay.coffee
   - decide.coffee
+  - eight-ball.coffee
   - fortune.coffee
   - hackernews.coffee
   - megusta.coffee
