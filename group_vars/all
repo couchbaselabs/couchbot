@@ -15,9 +15,10 @@ node_packages:
 nvm_dir: "/home/{{ hubot_admin }}/nvm"
 os_packages:
   - curl
-  - git
-  - openssl-devel
   - expat-devel
+  - git
+  - libicu-devel
+  - openssl-devel
   - redis
 src_dir: "/home/{{ hubot_admin }}/src/hubot"
 

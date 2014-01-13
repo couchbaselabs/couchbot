@@ -3,7 +3,6 @@
 
 - name: Hubot Activate!
   hosts: hubot
-  sudo: True
   roles:
      - hubot
 
