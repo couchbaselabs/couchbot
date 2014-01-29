@@ -4,19 +4,27 @@
 - name: Fetch EPEL repository package
   sudo: True
   get_url: url={{ epel_url }} dest=/tmp/{{ epel_package }}
+  tags:
+    - system_packages
 
 - name: Install EPEL package
   sudo: True
   yum: "name=/tmp/{{ epel_package }} state=present"
+  tags:
+    - system_packages
 
 - name: Install development tools
   sudo: True
   yum: name="@Development tools" state="latest"
+  tags:
+    - system_packages
   
 - name: Install OS packages
   sudo: True
   yum: "name={{ item }} state=latest"
   with_items: os_packages
+  tags:
+    - system_packages
 
 - name: Start Redis
   sudo: True
@@ -25,9 +33,13 @@
 - name: Install Node Version Manager
   sudo: False
   git: "repo=https://github.com/creationix/nvm.git dest={{ nvm_dir }}"
+  tags:
+    - node_packages
 
 - name: Install Node.js
   shell: ". {{ nvm_dir }}/nvm.sh && nvm install {{ node_version }} creates={{ node_dir }} executable=/bin/bash"
+  tags:
+    - node_packages
 
 - name: Clone Hubot repository
   sudo: False
@@ -40,6 +52,8 @@
 - name: Install CoffeeScript
   sudo: False
   command: "{{ node_dir }}/npm install -g coffee-script creates={{ node_dir }}/coffee"
+  tags:
+    - node_packages
 
 - name: Assemble Hubot
   sudo: False
@@ -58,10 +72,16 @@
   command: "{{ node_dir }}/npm install chdir={{ hubot_dir }}"
   command: "{{ node_dir }}/npm install {{ item }} chdir={{ hubot_dir }} creates={{ hubot_dir }}/node_modules/{{ item }}"
   with_items: node_packages
-  
+  tags:
+    - node_packages
+
 - name: Define Hubot environment
   sudo: False
   template: "src=_hubot.env.j2 dest={{ hubot_dir }}/{{ hubot_identity }}.env"
+  notify:
+    - restart hubot
+  tags: 
+    - hubot_environment
 
 - name: Install Hubot start script
   sudo: False
@@ -70,6 +90,12 @@
 - name: Install Hubot scripts
   sudo: False
   copy: "src=scripts dest={{ hubot_dir }}/scripts owner={{ hubot_admin }} mode=0644"
+
+- name: Configure Hubot scripts
+  sudo: False
+  template: "src=hubot-scripts.json.j2 dest={{ hubot_dir }}/hubot-scripts.json"
+  tags:
+    - hubot_scripts
 
 - name: Hubot home permissions
   sudo: True
@@ -80,12 +106,6 @@
   template: "src=hubot.init.j2 dest=/etc/init.d/hubot mode=0744"
   notify:
     - restart hubot
-
-- name: Configure Hubot scripts
-  sudo: False
-  template: "src=hubot-scripts.json.j2 dest={{ hubot_dir }}/hubot-scripts.json"
-  tags:
-    - configuration
-  notify:
-    - restart hubot
+  tags: 
+    - hubot_service
 
