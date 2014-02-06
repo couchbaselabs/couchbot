@@ -89,9 +89,10 @@
 
 - name: Install Hubot scripts
   sudo: False
-  copy: "src=scripts dest={{ hubot_dir }}/scripts owner={{ hubot_admin }} mode=0644"
+  copy: "src=scripts/ dest={{ hubot_dir }}/scripts owner={{ hubot_admin }} mode=0644"
   tags:
     - hubot_scripts
+
 - name: Configure Hubot scripts
   sudo: False
   template: "src=hubot-scripts.json.j2 dest={{ hubot_dir }}/hubot-scripts.json"

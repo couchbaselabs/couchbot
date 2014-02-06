@@ -11,8 +11,8 @@ module.exports = (robot) ->
   robot.hear /.*(nutshell).*/i, (msg) ->
     r = Math.random()
     if r <= 0.10
-      msg.send nuthshellBook
+      msg.send nutshellBook
 
   robot.respond /nutshell/i, (msg) ->
-    msg.send nuthshellBook
+    msg.send nutshellBook
 
