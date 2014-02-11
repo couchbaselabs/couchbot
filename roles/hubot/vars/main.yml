@@ -19,6 +19,7 @@ hubot_scripts:
   - base64.coffee
   - beerme.coffee
   - bees.coffee
+  - botsnack
   - cat.coffee
   - chm.coffee
   - clark.coffee
@@ -29,7 +30,6 @@ hubot_scripts:
   - fortune.coffee
   - hackernews.coffee
   - megusta.coffee
-  - meme_generator.coffee
   - penny-arcade.coffee
   - ping.coffee
   - redis-brain
