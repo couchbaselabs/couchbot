@@ -10,7 +10,7 @@ nutshellBook = 'http://i.imgur.com/hkFOVvJ.png'
 module.exports = (robot) ->
   robot.hear /.*(nutshell).*/i, (msg) ->
     r = Math.random()
-    if r <= 0.10
+    if r <= 0.30
       msg.send nutshellBook
 
   robot.respond /nutshell/i, (msg) ->
