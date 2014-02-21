@@ -2,17 +2,24 @@
 # File: group_vars/all - Global Hubot group variables
 
 epel_package: epel-release-6-8.noarch.rpm
+
 epel_url: "http://dl.fedoraproject.org/pub/epel/6/x86_64/{{ epel_package }}"
-node_version: 0.10.24
+
+node_version: 0.10.25
+
 node_dir: "{{ nvm_dir }}/v{{ node_version }}/bin"
+
 node_packages:
+  - cheerio
   - clark
   - htmlparser
   - nodepie
   - soupselect
   - hubot-hipchat
   - hubot-scripts
+
 nvm_dir: "/home/{{ hubot_admin }}/nvm"
+
 os_packages:
   - curl
   - expat-devel
@@ -20,5 +27,6 @@ os_packages:
   - libicu-devel
   - openssl-devel
   - redis
+
 src_dir: "/home/{{ hubot_admin }}/src/hubot"
 

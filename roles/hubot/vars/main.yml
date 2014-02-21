@@ -26,9 +26,12 @@ hubot_scripts:
   - coin.coffee
   - cowsay.coffee
   - decide.coffee
+  - devexcuse.coffee
   - eight-ball.coffee
   - fortune.coffee
   - hackernews.coffee
+  - im.coffee
+  - inigo-montoya.coffee
   - megusta.coffee
   - penny-arcade.coffee
   - ping.coffee
@@ -37,6 +40,8 @@ hubot_scripts:
   - scotch.coffee
   - shipit.coffee
   - stallman.coffee
+  - tell.coffee
+  - thought.coffee
   - wunderground.coffee
   - xkcd.coffee
   - zendesk.coffee

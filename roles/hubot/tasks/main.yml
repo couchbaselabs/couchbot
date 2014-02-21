@@ -34,7 +34,7 @@
   sudo: False
   git: "repo=https://github.com/creationix/nvm.git dest={{ nvm_dir }}"
   tags:
-    - node_packages
+    - node_nvm
 
 - name: Install Node.js
   shell: ". {{ nvm_dir }}/nvm.sh && nvm install {{ node_version }} creates={{ node_dir }} executable=/bin/bash"
@@ -44,6 +44,7 @@
 - name: Clone Hubot repository
   sudo: False
   git: "repo=git://github.com/github/hubot.git dest={{ src_dir }}"
+  tags: hubot_src
 
 - name: Install Hubot base
   sudo: False
@@ -98,10 +99,14 @@
   template: "src=hubot-scripts.json.j2 dest={{ hubot_dir }}/hubot-scripts.json"
   tags:
     - hubot_scripts
+  notify:
+    - restart hubot
 
 - name: Hubot home permissions
   sudo: True
   file: "path=/home/{{ hubot_admin }} owner={{ hubot_admin }} group={{ hubot_admin }} recurse=yes"
+  tags: 
+    - hubot_environment
   
 - name: Install service init script
   sudo: True
