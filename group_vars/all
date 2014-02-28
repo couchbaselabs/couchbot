@@ -5,15 +5,17 @@ epel_package: epel-release-6-8.noarch.rpm
 
 epel_url: "http://dl.fedoraproject.org/pub/epel/6/x86_64/{{ epel_package }}"
 
-node_version: 0.10.25
+node_version: 0.10.26
 
 node_dir: "{{ nvm_dir }}/v{{ node_version }}/bin"
 
 node_packages:
   - cheerio
   - clark
+  - cleverbot-node
   - htmlparser
   - nodepie
+  - querystring
   - soupselect
   - hubot-hipchat
   - hubot-scripts
