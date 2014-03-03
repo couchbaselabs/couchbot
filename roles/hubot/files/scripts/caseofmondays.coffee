@@ -1,9 +1,21 @@
 # Description:
 #   Looks like someone has a case of the Mondays
 #
-# Commands:
-#   couchbot case of the mondays
+# Dependencies:
+#   None
 #
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot case of the mondays
+#
+# Notes:
+#   "No. No, man. Shit no, man. I believe you'd get your ass kicked sayin'
+#   something like that, man."
+#
+# Author:
+#   brianshumate
 
 mondays = [
   "http://i.imgur.com/8n4hlQE.jpg"

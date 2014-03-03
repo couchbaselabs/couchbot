@@ -1,9 +1,20 @@
 # Description:
-# Nutshell
+#   Display the fictional O'RLY book "Nutshell in a Nutshell"
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
 #
 # Commands:
-# hubot nutshell - display the fictional O'RLY book "Nutshell in a Nutshell"
-# nutshell
+#   hubot nutshell
+#
+# Notes:
+#   Paradoxically insightful
+#
+# Author:
+#   brianshumate
 
 nutshellBook = 'http://i.imgur.com/hkFOVvJ.png'
 

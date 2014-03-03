@@ -1,9 +1,20 @@
 # Description:
-#   Displays an Venture Bros IGNORE ME! image
+#   Displays Venture Bros IGNORE ME! image
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
 #
 # Commands:
-#   couchbot ignore me
+#   hubot ignore me
 #
+# Notes:
+#   None
+#
+# Author:
+#   brianshumate
 
 ignore = [
   "http://3.bp.blogspot.com/-DFLMK7ffcJM/Tbjn752gOFI/AAAAAAAAAsk/qa7D5ZdQDgM/s1600/1301856749331.jpg",

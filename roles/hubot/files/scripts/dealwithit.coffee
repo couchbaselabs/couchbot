@@ -2,7 +2,7 @@
 #   Displays one of those silly "DEAL WITH IT" .GIFs
 #
 # Commands:
-#   couchbot deal with it
+#   hubot deal with it
 #
 
 deal = [

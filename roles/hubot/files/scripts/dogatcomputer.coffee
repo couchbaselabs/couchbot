@@ -1,9 +1,20 @@
 # Description:
 #   Displays a "I Have No Idea What I'm Doing" image
 #
-# Commands:
-#   couchbot no idea
+# Dependencies:
+#   None
 #
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot no idea
+#
+# Notes:
+#   No idea...
+#
+# Author:
+#   brianshumate
 
 noidea = "http://i.imgur.com/hmTeehN.jpg"
 
