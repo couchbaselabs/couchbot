@@ -102,6 +102,11 @@
   notify:
     - restart hubot
 
+- name: Configure Hubot external scripts
+  sudo: False
+  copy: "src=external-scripts.json dest={{ hubot_dir }}/external-scripts.json owner={{ hubot_admin }} group={{ hubot_admin }} mode=0644"
+  tags: hubot_scripts
+
 - name: Hubot home permissions
   sudo: True
   file: "path=/home/{{ hubot_admin }} owner={{ hubot_admin }} group={{ hubot_admin }} recurse=yes"
@@ -115,4 +120,9 @@
     - restart hubot
   tags: 
     - hubot_service
+
+- name: Restart Hubot
+  sudo: True
+  service: name=hubot state=restarted
+  tags: hubot_restart
 

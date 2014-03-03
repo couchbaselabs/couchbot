@@ -14,11 +14,12 @@ node_packages:
   - clark
   - cleverbot-node
   - htmlparser
+  - hubot-calculator
+  - hubot-hipchat
+  - hubot-scripts
   - nodepie
   - querystring
   - soupselect
-  - hubot-hipchat
-  - hubot-scripts
 
 nvm_dir: "/home/{{ hubot_admin }}/nvm"
 
