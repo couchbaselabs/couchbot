@@ -27,9 +27,12 @@ hubot_scripts:
   - coin.coffee
   - cowsay.coffee
   - decide.coffee
+  - defprogramming.coffee
   - devexcuse.coffee
   - eight-ball.coffee
+  - f-ing-weather.coffee
   - fortune.coffee
+  - grumpycat.coffee
   - hackernews.coffee
   - im.coffee
   - inigo-montoya.coffee
