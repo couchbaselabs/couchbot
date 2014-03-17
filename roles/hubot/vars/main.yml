@@ -19,7 +19,7 @@ hubot_scripts:
   - base64.coffee
   - beerme.coffee
   - bees.coffee
-  - botsnack
+  - botsnack.coffee
   - cat.coffee
   - chm.coffee
   - clark.coffee
