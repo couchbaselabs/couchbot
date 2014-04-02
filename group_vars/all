@@ -19,6 +19,7 @@ node_packages:
   - hubot-scripts
   - nodepie
   - querystring
+  - redis@0.8.4
   - soupselect
 
 nvm_dir: "/home/{{ hubot_admin }}/nvm"

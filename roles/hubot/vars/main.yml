@@ -30,6 +30,7 @@ hubot_scripts:
   - defprogramming.coffee
   - devexcuse.coffee
   - eight-ball.coffee
+  - factoid.coffee
   - f-ing-weather.coffee
   - fortune.coffee
   - grumpycat.coffee
