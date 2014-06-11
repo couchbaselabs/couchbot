@@ -51,6 +51,7 @@ hubot_scripts:
   - tell.coffee
   - thought.coffee
   - tryerlang.coffee
+  - wordnik.coffee
   - wunderground.coffee
   - xkcd.coffee
   - zendesk.coffee
