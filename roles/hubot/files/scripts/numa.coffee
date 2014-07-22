@@ -14,7 +14,7 @@
 #   Nu mă, nu mă iei, nu mă, nu mă, nu mă iei.
 #
 # Author:
-#   brianshumate
+#   Brian Shumate <brian@couchbase.com>
 
 numaiei = 'https://www.youtube.com/watch?v=60og9gwKh1o'
 

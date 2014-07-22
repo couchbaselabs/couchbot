@@ -14,7 +14,7 @@
 #   No idea...
 #
 # Author:
-#   brianshumate
+#   Brian Shumate <brian@couchbase.com>
 
 noidea = "http://i.imgur.com/hmTeehN.jpg"
 

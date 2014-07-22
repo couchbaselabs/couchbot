@@ -19,7 +19,7 @@ You need to install the following on Mac OS X:
 
 Next, configure and deploy the bot with these steps:
 
-1. Edit `group_vars/all` and change `node_version` if necessary.
+1. Edit `group_vars/all` and change `hubot_node_version` if necessary.
 2. Edit `roles/hubt/vars/main.yml` and change `hubot_identity`, `hubot_admin`,
    and `hubot_dir` values if necessary.
 3. Copy `roles/hubot/templates/hubot.env` to `roles/hubot/templates/_hubot.env` and edit the variables within. *Ensure

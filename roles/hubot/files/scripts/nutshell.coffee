@@ -14,7 +14,7 @@
 #   Paradoxically insightful
 #
 # Author:
-#   brianshumate
+#   Brian Shumate <brian@couchbase.com>
 
 nutshellBook = 'http://i.imgur.com/hkFOVvJ.png'
 

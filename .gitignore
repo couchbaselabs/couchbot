@@ -3,4 +3,5 @@
 .vagrant
 _hubot.env*
 node_modules
+yolo
 

@@ -14,7 +14,7 @@
 #   None
 #
 # Author:
-#   brianshumate
+#   Brian Shumate <brian@couchbase.com>
 
 ignore = [
   "http://3.bp.blogspot.com/-DFLMK7ffcJM/Tbjn752gOFI/AAAAAAAAAsk/qa7D5ZdQDgM/s1600/1301856749331.jpg",

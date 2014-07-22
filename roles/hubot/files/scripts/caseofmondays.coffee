@@ -15,7 +15,7 @@
 #   something like that, man."
 #
 # Author:
-#   brianshumate
+#   Brian Shumate <brian@couchbase.com>
 
 mondays = [
   "http://i.imgur.com/8n4hlQE.jpg"

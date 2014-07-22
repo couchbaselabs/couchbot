@@ -14,7 +14,7 @@
 #   various and sundry robot related keywords
 #
 # Author:
-#   brianshumate
+#   Brian Shumate <brian@couchbase.com>
 
 roundRobit = "(zoidberg) ROUND ROBIT"
 
