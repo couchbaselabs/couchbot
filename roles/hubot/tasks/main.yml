@@ -1,22 +1,22 @@
 ---
 # File: roles/hubot/tasks.yml - Hubot role tasks
 
-#- name: Install OS packages
-#  sudo: True
-#  apt: "name={{ item }} update_cache=yes"
-#  with_items: hubot_os_packages
-#  tags:
-#    - system_packages
-
 - name: Install OS packages
   sudo: True
-  apt: name=git update_cache=yes
+  apt: "name={{ item }} update_cache=yes"
+  with_items: hubot_os_packages
   tags:
     - system_packages
-    
-#- name: Start Redis
+
+#- name: Install OS packages
 #  sudo: True
-#  service: name=redis state=started
+#  apt: name=git update_cache=yes
+#  tags:
+#    - system_packages
+    
+- name: Start Redis
+  sudo: True
+  service: name=redis state=started
 
 - name: Install Node Version Manager
   sudo: False
@@ -113,4 +113,3 @@
   sudo: True
   service: name=hubot state=restarted
   tags: hubot_restart
-
