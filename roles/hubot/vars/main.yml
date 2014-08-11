@@ -1,15 +1,8 @@
 ---
 # File: group_vars/all - Hubot role variables
 # 
-# hubot_admin: Change to the user account that will run the bot; for
-# operating in development mode with Vagrant, this value should be "vagrant".
-# hubot_dir: Change to the home directory for the bot
-# hubot_identity: Change to a different short user name if necessary
 # hubot_scripts: A list of additional scripts used by our Hubot
 
-hubot_admin: brian
-hubot_dir: "/home/{{ hubot_admin }}/hubot"
-hubot_identity: couchbot
 hubot_scripts:
   - announce.coffee
   - achievement_unlocked.coffee

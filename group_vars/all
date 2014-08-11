@@ -1,9 +1,32 @@
 ---
 # File: group_vars/all - Global Hubot group variables
+#
+# hubot_admin: Change to the user account that will run the bot; for
+# operating in development mode with Vagrant, this value should be "vagrant".
+# hubot_dir: Change to the home directory for the bot
+# hubot_nvm_dir: Node Version Manager installation root directory
+# hubot_node_dir: Node.js installation root directory
+# hubot_src_dir: Hubot source directory
+# hubot_identity: Change to a different short user name if necessary
+# hubot_node_version: Node.js version to use
+# hubot_node_packages: Node.js dependencies
+# hubot_os_packages: OS dependencies
+
+hubot_admin: brian
+
+hubot_adapter: hipchat
+
+hubot_dir: "/home/{{ hubot_admin }}/hubot"
+
+hubot_nvm_dir: "/home/{{ hubot_admin }}/nvm"
+
+hubot_node_dir: "{{ hubot_nvm_dir }}/v{{ hubot_node_version }}"
+
+hubot_src_dir: "/home/{{ hubot_admin }}/src/hubot"
+
+hubot_identity: couchbot
 
 hubot_node_version: 0.10.26
-
-hubot_node_dir: "{{ hubot_nvm_dir }}/v{{ hubot_node_version }}/bin"
 
 hubot_node_packages:
   - cheerio
@@ -19,15 +42,16 @@ hubot_node_packages:
   - redis@0.8.4
   - soupselect
 
-hubot_nvm_dir: "/home/{{ hubot_admin }}/nvm"
-
 hubot_os_packages:
   - curl
-  - expat-devel
+  - expat
   - git
-  - libicu-devel
-  - openssl-devel
-  - redis
+  - libicu-dev
+  - openssl
+  - redis-server
 
-hubot_src_dir: "/home/{{ hubot_admin }}/src/hubot"
-
+hubot_all_dirs:
+    - "{{ hubot_dir }}"
+    - "{{ hubot_nvm_dir }}"
+    - "{{ hubot_src_dir }}"
+    - "/home/{{ hubot_admin }}/.npm"
