@@ -34,6 +34,7 @@ hubot_node_packages:
   - cleverbot-node
   - htmlparser
   - hubot-calculator
+  - hubot-factoid
   - hubot-hipchat
   - hubot-hipchat-emoticons
   - hubot-scripts
