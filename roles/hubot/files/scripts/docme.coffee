@@ -21,6 +21,6 @@ module.exports = (robot) ->
 googleMe = (msg, query, cb) ->
   site = 'site:+docs.couchbase.com+'
   msg.http('http://www.google.com/search')
-    .query(q: site + query)
+    .query(q: query + site)
     .get() (err, res, body) ->
       cb body.match(/class="r"><a href="\/url\?q=([^"]*)(&amp;sa.*)">/)?[1] || "Sorry, no results for '#{query}'"
