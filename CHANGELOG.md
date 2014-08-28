@@ -7,3 +7,7 @@
 ## v1.0.1
 
 - Did a bunch of bad things
+
+## v1.0.2
+
+- Remove some useless scripts and suchlike

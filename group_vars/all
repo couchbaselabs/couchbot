@@ -36,7 +36,6 @@ hubot_node_packages:
   - hubot-calculator
   - hubot-factoid
   - hubot-hipchat
-  - hubot-hipchat-emoticons
   - hubot-scripts
   - nodepie
   - querystring
