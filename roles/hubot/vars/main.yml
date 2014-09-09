@@ -33,6 +33,7 @@ hubot_scripts:
   - put-it-back.coffee
   - redis-brain
   - scotch.coffee
+  - spark.coffee
   - stallman.coffee
   - sudo.coffee
   - tryerlang.coffee

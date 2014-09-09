@@ -41,6 +41,7 @@ hubot_node_packages:
   - querystring
   - redis@0.8.4
   - soupselect
+  - textspark
 
 hubot_os_packages:
   - curl
