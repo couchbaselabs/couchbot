@@ -5,9 +5,8 @@
 #   hubot keep calm
 #
 
-erlang = 
-  "http://i.imgur.com/UWRjm7x.png"
+erlang = "http://i.imgur.com/UWRjm7x.png"
 
 module.exports = (robot) ->
   robot.hear /keep calm/i, (msg)->
-    msg.send msg.random erlang
+    msg.send erlang
