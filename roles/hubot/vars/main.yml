@@ -38,7 +38,7 @@ hubot_scripts:
   - redis-brain
   - remind.coffee
   - scotch.coffee
-  - shipit.coffee
+  - spark.coffee
   - stallman.coffee
   - sudo.coffee
   - tell.coffee
@@ -48,4 +48,3 @@ hubot_scripts:
   - wunderground.coffee
   - xkcd.coffee
   - zendesk.coffee
-
