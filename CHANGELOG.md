@@ -11,3 +11,7 @@
 ## v1.0.2
 
 - Remove some useless scripts and suchlike
+
+## v1.0.3
+
+- Having a script that outputs every supported emoticon is a bad idea™
