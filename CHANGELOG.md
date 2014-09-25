@@ -15,3 +15,7 @@
 ## v1.0.3
 
 - Having a script that outputs every supported emoticon is a bad idea™
+
+## v1.0.4
+
+- Make custom scripts as fun free and boring as possible

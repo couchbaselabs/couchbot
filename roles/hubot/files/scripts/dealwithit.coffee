@@ -21,4 +21,6 @@ deal = [
 
 module.exports = (robot) ->
   robot.hear /deal with it/i, (msg)->
-    msg.send msg.random deal
+    r = Math.random()
+    if r <= 0.05
+      msg.send msg.random deal
