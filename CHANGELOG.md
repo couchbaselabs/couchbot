@@ -19,3 +19,8 @@
 ## v1.0.4
 
 - Make custom scripts as fun free and boring as possible
+
+## v1.0.5
+
+- Remove Redis stuff (d'oh!)
+- Increment Node point JavaScript version to v0.10.32

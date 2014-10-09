@@ -26,7 +26,7 @@ hubot_src_dir: "/home/{{ hubot_admin }}/src/hubot"
 
 hubot_identity: couchbot
 
-hubot_node_version: 0.10.31
+hubot_node_version: 0.10.32
 
 hubot_node_packages:
   - cheerio
@@ -39,7 +39,6 @@ hubot_node_packages:
   - hubot-scripts
   - nodepie
   - querystring
-  - redis@0.8.4
   - soupselect
   - textspark
 
@@ -49,7 +48,6 @@ hubot_os_packages:
   - git
   - libicu-dev
   - openssl
-  - redis-server
 
 hubot_all_dirs:
     - "{{ hubot_dir }}"

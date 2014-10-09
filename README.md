@@ -32,3 +32,13 @@ deploy the bot for development and testing:
 vagrant up
 ```
 
+## Tested Software Versions
+
+This project is known to work with the following software versions:
+
+* Ubuntu: 14.01
+* Ansible: 1.7.2
+* Hubot: Gitub Master
+* Node.js: 0.10.32
+* VirtualBox: 4.3.16
+* Vagrant: 1.6.5
