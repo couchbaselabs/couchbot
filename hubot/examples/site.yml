@@ -1,0 +1,8 @@
+---
+# File: site.yml - Hubot example site playbook
+
+- name: Hubot activate!
+  hosts: hubot
+  sudo: True
+  roles:
+  - { role: hubot, hubot_admin: brian, hubot_identity: couchbot, hubot_description: 'Couchbase chat bot', hubot_owner: '"Brian Shumate <brian@couchbase.com>"' }

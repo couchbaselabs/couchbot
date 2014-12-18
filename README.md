@@ -5,7 +5,7 @@
 Couchbot is a [Hubot](https://github.com/github/hubot) instance that
 specializes in relaxation and helpful behaviors within a group chat setting.
 
-## Activate Couchbot for Development
+## Couchbot for Development
 
 Follow these directions for a development or testing deployment. Consider
 using a different account/name and channel for the development bot as
@@ -17,28 +17,34 @@ You need to install the following on Mac OS X:
 * [Vagrant](http://www.vagrantup.com/)
 * [Ansible](http://www.ansibleworks.com/docs/intro_installation.html)
 
-Next, configure and deploy the bot with these steps:
+Next, configure and deploy the bot with three easy steps:
 
-1. Edit `group_vars/all` and change `hubot_node_version` if necessary.
-2. Edit `roles/hubt/vars/main.yml` and change `hubot_identity`, `hubot_admin`,
-   and `hubot_dir` values if necessary.
-3. Copy `roles/hubot/templates/hubot.env` to `roles/hubot/templates/_hubot.env` and edit the variables within. *Ensure
-   that `_hubot.env` is not checked into this repository*.
-
-Finally, from the root of this project, use the following command to
+1. Edit `hubot/examples/site.yml` and change the following if necessary:
+ * `hubot_admin`
+ * `hubot_identity`
+ * `hubot_owner`
+ * `hubot_description`
+2. Copy `roles/hubot/templates/hubot.env` to 
+   `roles/hubot/templates/_hubot.env` and edit the variables within. 
+   **Ensure that `_hubot.env` is NOT checked into this repository**.
+3. Finally, from the root of this project, use the following commands to
 deploy the bot for development and testing:
 
 ```
+cd hubot/examples
 vagrant up
 ```
 
+## Couchbot for Production
+ 
 ## Tested Software Versions
 
 This project is known to work with the following software versions:
 
-* Ubuntu: 14.01
-* Ansible: 1.7.2
-* Hubot: Gitub Master
-* Node.js: 0.10.32
-* VirtualBox: 4.3.16
+* Ansible: 1.8.2
+* VirtualBox: 4.3.20
 * Vagrant: 1.6.5
+* Hubot: GitHub Master
+* Node.js: 0.10.33
+* CentOS/RHEL 6
+* Ubuntu: 13.10, 13.04, 12.10, 12.04

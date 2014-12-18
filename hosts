@@ -1,8 +1,0 @@
-#
-# File: hosts - Hubot host file
-#
-# NB: Change to appropriate hostname or IP address of Hubot system
-
-[hubot]
-centos-0662-brian.local
-

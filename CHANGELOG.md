@@ -24,3 +24,9 @@
 
 - Remove Redis stuff (d'oh!)
 - Increment Node point JavaScript version to v0.10.32
+
+## v1.1.0
+
+- Use the Ansible Hubot role from Galaxy
+- New Yeoman generator method of bot installation
+- Update documentation
