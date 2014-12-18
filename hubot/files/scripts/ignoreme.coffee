@@ -24,4 +24,9 @@ ignore = [
 
 module.exports = (robot) ->
   robot.hear /ignore me/i, (msg)->
+    r = Math.random()
+    if r <= 0.05
+      msg.send msg.random ignore
+      
+  robot.respond /ignore me/i, (msg) ->
     msg.send msg.random ignore
