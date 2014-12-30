@@ -30,3 +30,9 @@
 - Use the Ansible Hubot role from Galaxy
 - New Yeoman generator method of bot installation
 - Update documentation
+
+## v1.1.1
+
+- Switch to released generator-hubot
+- Switch brain to file
+- Remove all Redis refs

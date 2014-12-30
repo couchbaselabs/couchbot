@@ -13,5 +13,4 @@ hubot_debian_os_packages:
   - git
   - libicu-dev
   - openssl
-  - redis-server
   - build-essential

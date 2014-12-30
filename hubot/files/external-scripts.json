@@ -1,1 +1,10 @@
-["hubot-calculator"]
+[
+  "hubot-calculator", 
+  "hubot-diagnostics", 
+  "hubot-help", 
+  "hubot-google-images", 
+  "hubot-maps", 
+  "hubot-rules", 
+  "hubot-google-translate",
+  "hubot-youtube"
+]

@@ -18,6 +18,7 @@ hubot_scripts:
   - bees.coffee
   - botsnack.coffee
   - cat.coffee
+  - catfacts.coffee
   - chm.coffee
   - clark.coffee
   - cleverbot.coffee
@@ -26,7 +27,8 @@ hubot_scripts:
   - decide.coffee
   - devexcuse.coffee
   - eight-ball.coffee
-  - f-ing-weather.coffee
+  - factoid.coffee
+  - file-brain.coffee
   - fortune.coffee
   - grumpycat.coffee
   - hackernews.coffee
@@ -35,6 +37,8 @@ hubot_scripts:
   - penny-arcade.coffee
   - ping.coffee
   - put-it-back.coffee
+  - reddit.coffee
+  - reddit-jokes.coffee
   - scotch.coffee
   - spark.coffee
   - stallman.coffee

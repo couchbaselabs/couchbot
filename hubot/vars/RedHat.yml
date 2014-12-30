@@ -18,4 +18,3 @@ hubot_redhat_os_packages:
   - libicu-devel
   - openssl-devel
   - expat-devel
-  - redis
