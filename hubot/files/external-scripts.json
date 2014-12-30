@@ -1,6 +1,7 @@
 [
   "hubot-calculator",
   "hubot-diagnostics",
+  "hubot-factoid",
   "hubot-help",
   "hubot-google-images",
   "hubot-maps",
