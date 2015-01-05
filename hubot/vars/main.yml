@@ -27,7 +27,6 @@ hubot_scripts:
   - decide.coffee
   - devexcuse.coffee
   - eight-ball.coffee
-  - factoid.coffee
   - file-brain.coffee
   - fortune.coffee
   - grumpycat.coffee

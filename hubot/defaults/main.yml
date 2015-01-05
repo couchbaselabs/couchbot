@@ -45,7 +45,6 @@ hubot_node_packages:
   - htmlparser
   - hubot-calculator
   - hubot-hipchat-emoticons
-  - hubot-factoid
   - hubot-hipchat
   - hubot-scripts
   - nodepie
