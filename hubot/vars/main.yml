@@ -29,9 +29,11 @@ hubot_scripts:
   - eight-ball.coffee
   - file-brain.coffee
   - fortune.coffee
+  - google.coffee
   - grumpycat.coffee
   - hackernews.coffee
   - inigo-montoya.coffee
+  - jira-issues.coffee
   - megusta.coffee
   - penny-arcade.coffee
   - ping.coffee
