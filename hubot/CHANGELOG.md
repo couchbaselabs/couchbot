@@ -48,3 +48,7 @@
 
 - Tidied external scripts
 - Updated documentation
+
+## 1.2.2
+
+- Switch from Jira Issues script to Jira script

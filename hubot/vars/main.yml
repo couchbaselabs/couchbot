@@ -33,7 +33,7 @@ hubot_scripts:
   - grumpycat.coffee
   - hackernews.coffee
   - inigo-montoya.coffee
-  - jira-issues.coffee
+  - jira.coffee
   - megusta.coffee
   - penny-arcade.coffee
   - ping.coffee
