@@ -36,3 +36,7 @@
 - Switch to released generator-hubot
 - Switch brain to file
 - Remove all Redis refs
+
+## v1.2.3
+
+- Go ahead and sorta join rooms on invite — see if I care...
