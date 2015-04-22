@@ -28,4 +28,4 @@ module.exports = (robot) ->
       msg.send msg.random mondays
 
   robot.respond /case of the mondays/i, (msg) ->
-    msg.send mondays
+    msg.send msg.random mondays

@@ -40,3 +40,8 @@
 ## v1.2.3
 
 - Go ahead and sorta join rooms on invite — see if I care...
+
+## v1.2.4
+
+- Couchbot has become sentient and relies on a steady stream of JSON data
+  to fuel its bent on taking over a subset of the world
