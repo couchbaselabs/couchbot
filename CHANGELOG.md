@@ -45,3 +45,7 @@
 
 - Couchbot has become sentient and relies on a steady stream of JSON data
   to fuel its bent on taking over a subset of the world
+
+## v1.2.5
+
+- shrugpalmfaceflip9001
