@@ -63,7 +63,7 @@
   tags:
     - hubot_scripts
 
-- name: Configure Hubot scripts
+- name: Hubot external scripts
   sudo: False
   template: "src=hubot-scripts.json.j2 dest={{ hubot_dir }}/hubot-scripts.json"
   tags:
