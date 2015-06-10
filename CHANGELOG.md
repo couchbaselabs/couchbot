@@ -49,3 +49,7 @@
 ## v1.2.5
 
 - shrugpalmfaceflip9001
+
+## v1.2.6
+
+- stuff
