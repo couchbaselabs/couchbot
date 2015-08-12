@@ -4,4 +4,5 @@
 _hubot.env*
 node_modules
 yolo
+hubot/examples/brianshumate.hubot
 
