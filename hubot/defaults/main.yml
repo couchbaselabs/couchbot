@@ -24,7 +24,7 @@ hubot_admin: vagrant
 
 hubot_adapter: hipchat
 
-hubot_node_version: 0.10.36
+hubot_node_version: 0.10.37
 
 hubot_dir: "/home/{{ hubot_admin }}/hubot"
 
@@ -34,20 +34,15 @@ hubot_node_dir: "{{ hubot_nvm_dir }}/v{{ hubot_node_version }}"
 
 hubot_identity: hubot
 
-hubot_owner: "'Stephie Andretti <stephie@example.com>'"
+hubot_owner: "'Brian Shumate <brian@couchbase.com>'"
 
-hubot_description: "'A funny chatting robot'"
+hubot_description: "'A furniture robot'"
 
 hubot_node_packages:
   - cheerio
   - clark
-  - cleverbot-node
   - htmlparser
-  - hubot-calculator
-  - hubot-factoid
-  - hubot-hipchat-emoticons
   - hubot-hipchat
-  - hubot-privilege
   - hubot-scripts
   - hubot-youtube
   - nodepie

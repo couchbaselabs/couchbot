@@ -20,7 +20,6 @@ hubot_scripts:
   - catfacts.coffee
   - chm.coffee
   - clark.coffee
-  - cleverbot.coffee
   - coin.coffee
   - cowsay.coffee
   - decide.coffee
@@ -31,7 +30,6 @@ hubot_scripts:
   - google.coffee
   - grumpycat.coffee
   - hackernews.coffee
-  - hubot-privilege
   - inigo-montoya.coffee
   - jira.coffee
   - megusta.coffee

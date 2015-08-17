@@ -1,10 +1,8 @@
 [
-  "hubot-calculator",
   "hubot-diagnostics",
   "hubot-help",
   "hubot-google-images",
   "hubot-maps",
-  "hubot-privilege",
   "hubot-rules",
   "hubot-google-translate",
   "hubot-youtube"
