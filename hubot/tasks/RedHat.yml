@@ -5,13 +5,6 @@
   yum: name=libselinux-python state=present
   tags: installation
 
-# EPEL is needed for Redis package
-- name: Fetch EPEL repository package
-  get_url: url={{ epel_url }} dest=/tmp/{{ epel_package }}
-
-- name: Install EPEL package
-  yum: "name=/tmp/{{ epel_package }} state=present"
-
 - name: Install development tools
   yum: name="@Development tools" state="latest"
 
@@ -98,10 +91,6 @@
   with_items: hubot_all_dirs
   tags:
     - hubot_environment
-
-- name: Start Redis
-  sudo: True
-  service: name=redis state=started
 
 - name: Install service init script
   template: "src=hubot.init.j2 dest=/etc/init.d/hubot mode=0744"

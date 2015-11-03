@@ -17,7 +17,7 @@ You need to install the following on Mac OS X:
 * [Vagrant](http://www.vagrantup.com/)
 * [Ansible](http://www.ansibleworks.com/docs/intro_installation.html)
 
-Next, configure and deploy the bot with three easy steps:
+Configure and deploy the bot with three easy steps:
 
 1. Edit `hubot/examples/site.yml` and change the following if necessary:
  * `hubot_admin`
@@ -27,24 +27,29 @@ Next, configure and deploy the bot with three easy steps:
 2. Copy `roles/hubot/templates/hubot.env` to 
    `roles/hubot/templates/_hubot.env` and edit the variables within. 
    **Ensure that `_hubot.env` is NOT checked into this repository**.
-3. Finally, from the root of this project, use the following commands to
-deploy the bot for development and testing:
+3. Use the following commands from the root of this project to deploy your
+   bot for development and testing:
 
 ```
-cd hubot/examples
+cd couchbot/hubot/examples
 vagrant up
 ```
 
 ## Couchbot for Production
- 
+
+1. Clone this repository
+2. Create a hosts inventory file containing the production host
+3. `cd couchbot/hubot/examples`
+4. `ansible-playbook -i host_inventory_file site.yml`
+
 ## Tested Software Versions
 
-This project is known to work with the following software versions:
+This project works with the following software versions:
 
-* Ansible: 1.8.2
-* VirtualBox: 4.3.20
-* Vagrant: 1.6.5
+* Ansible: 1.9.4
+* VirtualBox: 4.3.30
+* Vagrant: 1.7.4
 * Hubot: GitHub Master
-* Node.js: 0.10.33
+* Node.js: 0.10.37
 * CentOS/RHEL 6
 * Ubuntu: 13.10, 13.04, 12.10, 12.04

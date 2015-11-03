@@ -9,7 +9,7 @@
 # hubot_adapter:              Hubot chat adapter to use
 # hubot_node_version:         Node.js version to use
 # hubot_dir:                  Bot home directory
-# hubot_nvm_dir:              Node Version Manager installation root directory
+# hubot_nvm_dir:              NVM installation root directory
 # hubot_node_dir:             Node.js installation root directory
 # hubot_identity:             Bot user name
 # hubot_description:          Description of bot
@@ -17,6 +17,10 @@
 # hubot_node_packages:        Node.js dependencies
 # hubot_global_node_packages: Gloabl Node.js dependencies
 # hubot_all_dirs:             List of directories owned by Hubot admin user
+# hubot_debian_os_packages:   A list of operating system packages to install
+# epel_package:               EPEL reposiory package file name
+# epel_url:                   EPEL repository URL
+# hubot_redhat_os_packages:   A list of operating system packages to install
 #
 #############################################################################
 
@@ -41,6 +45,7 @@ hubot_description: "'A furniture robot'"
 hubot_node_packages:
   - cheerio
   - clark
+  - cleverbot-node
   - htmlparser
   - hubot-hipchat
   - hubot-scripts
@@ -58,3 +63,64 @@ hubot_all_dirs:
   - "{{ hubot_dir }}"
   - "{{ hubot_nvm_dir }}"
   - "/home/{{ hubot_admin }}/.npm"
+
+hubot_debian_os_packages:
+  - curl
+  - expat
+  - git
+  - libicu-dev
+  - openssl
+  - build-essential
+
+epel_package: epel-release-6-8.noarch.rpm
+epel_url: "http://dl.fedoraproject.org/pub/epel/6/x86_64/{{ epel_package }}"
+
+hubot_redhat_os_packages:
+  - curl
+  - git
+  - libicu-devel
+  - openssl-devel
+  - expat-devel
+
+hubot_scripts:
+  - announce.coffee
+  - achievement_unlocked.coffee
+  - ackbar.coffee
+  - applause.coffee
+  - ascii.coffee
+  - base64.coffee
+  - beerme.coffee
+  - bees.coffee
+  - botsnack.coffee
+  - cat.coffee
+  - catfacts.coffee
+  - chm.coffee
+  - clark.coffee
+  - cleverbot.coffee
+  - coin.coffee
+  - cowsay.coffee
+  - decide.coffee
+  - devexcuse.coffee
+  - eight-ball.coffee
+  - file-brain.coffee
+  - fortune.coffee
+  - google.coffee
+  - grumpycat.coffee
+  - hackernews.coffee
+  - inigo-montoya.coffee
+  - jira.coffee
+  - megusta.coffee
+  - penny-arcade.coffee
+  - ping.coffee
+  - put-it-back.coffee
+  - reddit.coffee
+  - reddit-jokes.coffee
+  - scotch.coffee
+  - spark.coffee
+  - stallman.coffee
+  - sudo.coffee
+  - tryerlang.coffee
+  - wordnik.coffee
+  - wunderground.coffee
+  - xkcd.coffee
+  - zendesk.coffee

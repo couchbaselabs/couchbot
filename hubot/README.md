@@ -102,7 +102,6 @@ part of `vars/main.yml` and installed by default:
 * hackernews.coffee
 * megusta.coffee
 * ping.coffee
-* redis-brain
 * reddit
 * reddit-jokes.coffee
 * reddit-random-top.coffee

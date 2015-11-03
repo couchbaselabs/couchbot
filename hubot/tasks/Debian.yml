@@ -27,9 +27,6 @@
   tags:
     - node_packages
 
-- name: Stop Hubot
-  service: name=hubot state=stopped
-
 - name: Decommission previous model
   sudo: True
   file: "path={{ hubot_dir }} state=absent"
@@ -90,10 +87,6 @@
   with_items: hubot_all_dirs
   tags:
     - hubot_environment
-
-- name: Start Redis
-  sudo: True
-  service: name=redis-server state=started
 
 - name: Install Upstart script
   sudo: True
