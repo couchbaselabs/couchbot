@@ -28,13 +28,13 @@ hubot_admin: vagrant
 
 hubot_adapter: hipchat
 
-hubot_node_version: 0.10.37
+hubot_node_version: 4.2.2
 
 hubot_dir: "/home/{{ hubot_admin }}/hubot"
 
 hubot_nvm_dir: "/home/{{ hubot_admin }}/.nvm"
 
-hubot_node_dir: "{{ hubot_nvm_dir }}/v{{ hubot_node_version }}"
+hubot_node_dir: "{{ hubot_nvm_dir }}/versions/node/v{{ hubot_node_version }}"
 
 hubot_identity: hubot
 
@@ -107,7 +107,6 @@ hubot_scripts:
   - fortune.coffee
   - google.coffee
   - grumpycat.coffee
-  - hackernews.coffee
   - inigo-montoya.coffee
   - itcrowd.coffee
   - jira.coffee

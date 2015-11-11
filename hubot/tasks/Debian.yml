@@ -1,12 +1,12 @@
 ---
 # File: tasks/Debian.yml - Ansible Hubot Debian specific role tasks
 
-- name: Install OS packages
-  sudo: True
-  apt: "name={{ item }} update_cache=yes"
-  with_items: hubot_debian_os_packages
-  tags:
-    - system_packages
+#- name: Install OS packages
+#  sudo: True
+#  apt: "name={{ item }} update_cache=yes"
+#  with_items: hubot_debian_os_packages
+#  tags:
+#    - system_packages
 
 - name: Install Node Version Manager
   sudo: False
