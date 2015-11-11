@@ -107,6 +107,7 @@ hubot_scripts:
   - grumpycat.coffee
   - hackernews.coffee
   - inigo-montoya.coffee
+  - itcrowd.coffee
   - jira.coffee
   - megusta.coffee
   - penny-arcade.coffee
