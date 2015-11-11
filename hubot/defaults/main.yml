@@ -87,7 +87,6 @@ hubot_scripts:
   - achievement_unlocked.coffee
   - ackbar.coffee
   - applause.coffee
-  - ascii.coffee
   - base64.coffee
   - beerme.coffee
   - bees.coffee
