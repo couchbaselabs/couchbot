@@ -50,9 +50,11 @@ hubot_node_packages:
   - hubot-hipchat
   - hubot-scripts
   - hubot-youtube
+  - jsdom
   - nodepie
   - soupselect
   - textspark
+  - underscore
 
 hubot_global_node_packages:
   - coffee-script
@@ -107,6 +109,7 @@ hubot_scripts:
   - grumpycat.coffee
   - hackernews.coffee
   - inigo-montoya.coffee
+  - itcrowd.coffee
   - jira.coffee
   - megusta.coffee
   - penny-arcade.coffee
