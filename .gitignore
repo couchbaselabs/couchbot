@@ -1,8 +1,6 @@
 .DS_Store
 .tm_properties
 .vagrant
-_hubot.env*
 node_modules
-yolo
-hubot/examples/brianshumate.hubot
+Dockerfile
 

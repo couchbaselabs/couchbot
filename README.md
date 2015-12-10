@@ -12,6 +12,7 @@ This container works fine with `docker-machine` on Mac OS X.
 ```
 docker pull brianshumate/hubot
 git clone git@github.com:couchbaselabs/couchbot.git
+cp ./couchbot/Dockerfile.example ./couchbot/Dockerfile
 $EDITOR ./couchbot/Dockerfile # Set proper values for all applicable ENVs
 docker build -t="couchbase/hubot:dev" ./couchbot/
 docker run -d -p 45678:8080 couchbase/hubot:dev
@@ -24,6 +25,7 @@ Running in production:
 ```
 docker pull brianshumate/hubot
 git clone git@github.com:couchbaselabs/couchbot.git
+cp ./couchbot/Dockerfile.example ./couchbot/Dockerfile
 $EDITOR ./couchbot/Dockerfile # Set proper values for all applicable ENVs
 docker build -t="couchbase/hubot:prod" ./couchbot/
 docker run -d -p 45678:8080 couchbase/hubot:prod
