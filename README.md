@@ -13,7 +13,7 @@ This container works fine with `docker-machine` on Mac OS X.
 ```
 docker pull brianshumate/couchbot:dev
 git clone git@github.com:couchbaselabs/couchbot.git
-$EDITOR ./couchbot/etc/_couchbot.env # set proper values for all vars
+$EDITOR ./etc/_couchbot.env # set proper values for all vars
 docker build  -t="couchbase/couchbot:dev" ./couchbot/
 docker run -p 45678:8073 --env-file ./etc/_couchbot.env couchbase/couchbot:dev
 ```
@@ -24,7 +24,7 @@ Running in production:
 
 ```
 docker pull brianshumate/couchbot:prod
-$EDITOR ./couchbot/etc/_couchbot.env # set proper values for all vars
+$EDITOR ./etc/_couchbot.env # set proper values for all vars
 docker run -d -p 45678:8073 -e ./etc/_couchbot.env couchbase/couchbot:prod
 ```
 
