@@ -3,19 +3,19 @@
 ![Couchbot](https://github.com/couchbaselabs/couchbot/blob/master/share/couchbot.png?raw=true)
 
 Couchbot is a [Hubot](https://github.com/github/hubot) instance that
-specializes in relaxation and helpful behaviors within a group chat setting.
+specializes in relaxation and helpful behaviors within a group 
+chat setting.
 
 ## Development
 
 This container works fine with `docker-machine` on Mac OS X.
 
 ```
-docker pull brianshumate/hubot
+docker pull brianshumate/couchbot:dev
 git clone git@github.com:couchbaselabs/couchbot.git
-cp ./couchbot/Dockerfile.example ./couchbot/Dockerfile
-$EDITOR ./couchbot/Dockerfile # Set proper values for all applicable ENVs
-docker build  -e _bot.env -t="couchbase/hubot:dev" ./couchbot/
-docker run -d -p 45678:8073 -e _bot.env couchbase/couchbot:dev
+$EDITOR ./couchbot/etc/_couchbot.env # set proper values for all vars
+docker build  -t="couchbase/couchbot:dev" ./couchbot/
+docker run -p 45678:8073 --env-file ./etc/_couchbot.env couchbase/couchbot:dev
 ```
 
 ## Production
@@ -23,12 +23,9 @@ docker run -d -p 45678:8073 -e _bot.env couchbase/couchbot:dev
 Running in production:
 
 ```
-docker pull brianshumate/hubot
-git clone git@github.com:couchbaselabs/couchbot.git
-cp ./couchbot/Dockerfile.example ./couchbot/Dockerfile
-$EDITOR ./couchbot/Dockerfile # Set proper values for all applicable ENVs
-docker build -e _bot.env -t="couchbase/hubot:prod" ./couchbot/
-docker run -d -p 45678:8073 -e _bot.env couchbase/couchbot:prod
+docker pull brianshumate/couchbot:prod
+$EDITOR ./couchbot/etc/_couchbot.env # set proper values for all vars
+docker run -d -p 45678:8073 -e ./etc/_couchbot.env couchbase/couchbot:prod
 ```
 
 ## Tested Software Versions
@@ -36,6 +33,6 @@ docker run -d -p 45678:8073 -e _bot.env couchbase/couchbot:prod
 This project works with the following software versions:
 
 * Docker: 1.8.3
-* VirtualBox: 4.3.30
+* VirtualBox: 5.0.10
 * Hubot: GitHub Master
-* Node.js: 4.2.2
+* Node.js: 0.12.2
