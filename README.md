@@ -14,8 +14,8 @@ docker pull brianshumate/hubot
 git clone git@github.com:couchbaselabs/couchbot.git
 cp ./couchbot/Dockerfile.example ./couchbot/Dockerfile
 $EDITOR ./couchbot/Dockerfile # Set proper values for all applicable ENVs
-docker build -t="couchbase/hubot:dev" ./couchbot/
-docker run -d -p 45678:8080 couchbase/hubot:dev
+docker build  -e _bot.env -t="couchbase/hubot:dev" ./couchbot/
+docker run -d -p 45678:8073 -e _bot.env couchbase/couchbot:dev
 ```
 
 ## Production
@@ -27,8 +27,8 @@ docker pull brianshumate/hubot
 git clone git@github.com:couchbaselabs/couchbot.git
 cp ./couchbot/Dockerfile.example ./couchbot/Dockerfile
 $EDITOR ./couchbot/Dockerfile # Set proper values for all applicable ENVs
-docker build -t="couchbase/hubot:prod" ./couchbot/
-docker run -d -p 45678:8080 couchbase/hubot:prod
+docker build -e _bot.env -t="couchbase/hubot:prod" ./couchbot/
+docker run -d -p 45678:8073 -e _bot.env couchbase/couchbot:prod
 ```
 
 ## Tested Software Versions
