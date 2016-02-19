@@ -25,7 +25,7 @@ Running in production:
 ```
 docker pull brianshumate/couchbot:prod
 $EDITOR _couchbot.env # set proper values for all vars
-docker run -d -p 45678:8073 -e _couchbot.env couchbase/couchbot:prod
+docker run -d -p 45678:8073 --env-file _couchbot.env couchbase/couchbot:prod
 ```
 
 ## Tested Software Versions
