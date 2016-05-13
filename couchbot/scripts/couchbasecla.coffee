@@ -5,8 +5,8 @@
 #   None
 #
 # Configuration:
-#   CLA_CHECK_URL: the base URL to the check script
-#   CLA_DEFAULT_OWNER: the default github organization to check if not provided (eg. 'couchbase')
+#   HUBOT_CLA_CHECK_URL: the base URL to the check script
+#   HUBOT_CLA_DEFAULT_OWNER: the default github organization to check if not provided (eg. 'couchbase')
 #
 # Commands:
 #   couchbot check cla for <email>
@@ -42,17 +42,17 @@ module.exports = (robot) ->
     robot.respond PATTERN_EMAIL, (res) ->
         res.message.done = true
         claUser = escape(res.match[1])
-        claCheckUrl = process.env.CLA_CHECK_URL
+        claCheckUrl = process.env.HUBOT_CLA_CHECK_URL
         if !!claCheckUrl
             claMsg = "user #{claUser}"
             claUrl = "#{claCheckUrl}/checkcla?email=#{claUser}"
             evaluateCla(claMsg, claUrl, res)
         else
-            res.send "Sorry, someone needs to define CLA_CHECK_URL"
+            res.send "Sorry, someone needs to define HUBOT_CLA_CHECK_URL"
     robot.respond PATTERN_PR_REPO, (res) ->
         res.message.done = true
-        claCheckUrl = process.env.CLA_CHECK_URL
-        claDefaultOwner = process.env.CLA_DEFAULT_OWNER
+        claCheckUrl = process.env.HUBOT_CLA_CHECK_URL
+        claDefaultOwner = process.env.HUBOT_CLA_DEFAULT_OWNER
         if claCheckUrl? and claDefaultOwner?
             claPR = escape(res.match[1])
             claRepo = res.match[2]
@@ -60,11 +60,11 @@ module.exports = (robot) ->
             claUrl = "#{claCheckUrl}/checkcla?owner=#{claDefaultOwner}&repo=#{claRepo}&prnum=#{claPR}"
             evaluateCla(claMsg, claUrl, res, true)
         else
-            res.send "Sorry, someone needs to define CLA_CHECK_URL and CLA_DEFAULT_OWNER"
+            res.send "Sorry, someone needs to define HUBOT_CLA_CHECK_URL and HUBOT_CLA_DEFAULT_OWNER"
     robot.respond PATTERN_PR_OWNER_AND_REPO, (res) ->
         #PR with both OWNER and REPO
         res.message.done = true
-        claCheckUrl = process.env.CLA_CHECK_URL
+        claCheckUrl = process.env.HUBOT_CLA_CHECK_URL
         if claCheckUrl?
             claPR = escape(res.match[1])
             claOwner = escape(res.match[2])
@@ -73,10 +73,10 @@ module.exports = (robot) ->
             claUrl = "#{claCheckUrl}/checkcla?owner=#{claOwner}&repo=#{claRepo}&prnum=#{claPR}"
             evaluateCla(claMsg, claUrl, res, true)
         else
-            res.send "Sorry, someone needs to define CLA_CHECK_URL"
+            res.send "Sorry, someone needs to define HUBOT_CLA_CHECK_URL"
     robot.respond PATTERN_PR_URL, (res) ->
         res.message.done = true
-        claCheckUrl = process.env.CLA_CHECK_URL
+        claCheckUrl = process.env.HUBOT_CLA_CHECK_URL
         if claCheckUrl?
             claOwner = escape(res.match[1])
             claRepo = escape(res.match[2])
@@ -85,6 +85,6 @@ module.exports = (robot) ->
             claUrl = "#{claCheckUrl}/checkcla?owner=#{claOwner}&repo=#{claRepo}&prnum=#{claPR}"
             evaluateCla(claMsg, claUrl, res)
         else
-            res.send "Sorry, someone needs to define CLA_CHECK_URL"
+            res.send "Sorry, someone needs to define HUBOT_CLA_CHECK_URL"
     robot.respond /((?:check )?cla$|(?:check )?cla .*)/i, (res) ->
         res.send "Sorry, I don't understand '#{res.match[1]}', cla command are either: 'check cla for EMAIL' or 'check cla for PR_NUMBER in [OWNER/]REPO'"
