@@ -3,7 +3,7 @@
 ![Couchbot](https://github.com/couchbaselabs/couchbot/blob/master/share/couchbot.png?raw=true)
 
 Couchbot is a [Hubot](https://github.com/github/hubot) instance that
-specializes in relaxation and helpful behaviors within a group 
+specializes in relaxation and helpful behaviors within a group
 chat setting.
 
 ## Development
