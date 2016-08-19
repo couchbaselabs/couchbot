@@ -16,7 +16,7 @@ RUN apt-get update && \
 
 COPY couchbot/bin ${BOTDIR}/bin
 COPY couchbot/brain-dump.json ${BOTDIR}/brain-dump.json
-COPY couchbot/external-scripts.json ${BOTDIR}
+COPY couchbot/external-scripts.json ${BOTDIR}/external-scripts.json
 COPY couchbot/hubot-scripts.json ${BOTDIR}/hubot-scripts.json
 COPY couchbot/package.json ${BOTDIR}/package.json
 COPY couchbot/Procfile ${BOTDIR}/Procfile
