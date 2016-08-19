@@ -21,7 +21,7 @@ noidea = "http://i.imgur.com/hmTeehN.jpg"
 module.exports = (robot) ->
   robot.hear /(dunno|I don\'t know|beats me|no idea)/i, (msg)->
     r = Math.random()
-    if r <= 0.5
+    if r <= 0.2
       msg.send noidea
 
   robot.respond /dunno|I don\'t know|beats me|no idea/i, (msg) ->
